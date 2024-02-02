@@ -14,6 +14,7 @@ class ThemeProvider with ChangeNotifier {
   // setter Theme
   set themeData(ThemeData themeData) {
     _themeData = themeData;
+    notifyListeners();
   }
 
   // methods to toggle theme

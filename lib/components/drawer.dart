@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:minimal_notes_app/components/draw_tile.dart';
+import 'package:minimal_notes_app/pages/settings_page.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -27,7 +28,10 @@ class MyDrawer extends StatelessWidget {
           DrawerTile(
             title: 'Setting',
             leading: const Icon(Icons.settings),
-            onTap: () {},
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const SettingsPage()));
+            },
           )
         ]
       ),
